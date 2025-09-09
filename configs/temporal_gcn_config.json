@@ -1,0 +1,48 @@
+{
+  "model_type": "temporal_gcn",
+  "experiment_name": "temporal_gcn_baseline",
+  
+  "data": {
+    "data_dir": "data/processed",
+    "sequence_length": 12,
+    "prediction_horizon": 6,
+    "batch_size": 32,
+    "num_workers": 0
+  },
+  
+  "model": {
+    "num_nodes": 100,
+    "input_dim": 10,
+    "hidden_dim": 64,
+    "output_dim": 1,
+    "dropout": 0.1
+  },
+  
+  "training": {
+    "num_epochs": 100,
+    "early_stopping_patience": 15,
+    "save_every": 10,
+    "grad_clip": 1.0
+  },
+  
+  "optimizer": {
+    "type": "adamw",
+    "learning_rate": 0.001,
+    "weight_decay": 0.01
+  },
+  
+  "scheduler": {
+    "type": "step",
+    "step_size": 30,
+    "gamma": 0.5
+  },
+  
+  "loss": {
+    "type": "huber"
+  },
+  
+  "output": {
+    "output_dir": "models/experiments",
+    "log_level": "INFO"
+  }
+}
