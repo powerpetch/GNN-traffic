@@ -305,9 +305,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📧 Contact
 
 For questions or collaborations:
-- **Email**: [your-email@example.com]
-- **GitHub**: [your-github-username]
-- **Project Repository**: [https://github.com/your-username/gnn-traffic]
+- **Email**: [powerpetch05@gmail.com]
+- **GitHub**: [powerpetch05]
+- **Project Repository**: [https://github.com/powerpetch05/gnn-traffic]
 
 ---
 
