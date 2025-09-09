@@ -1,0 +1,49 @@
+{
+  "model_type": "stgcn",
+  "experiment_name": "stgcn_baseline",
+  
+  "data": {
+    "data_dir": "data/processed",
+    "sequence_length": 12,
+    "prediction_horizon": 6,
+    "batch_size": 32,
+    "num_workers": 0
+  },
+  
+  "model": {
+    "num_nodes": 100,
+    "num_features": 10,
+    "hidden_dim": 64,
+    "num_layers": 2,
+    "dropout": 0.1
+  },
+  
+  "training": {
+    "num_epochs": 100,
+    "early_stopping_patience": 15,
+    "save_every": 10,
+    "grad_clip": 1.0
+  },
+  
+  "optimizer": {
+    "type": "adamw",
+    "learning_rate": 0.001,
+    "weight_decay": 0.01,
+    "betas": [0.9, 0.999]
+  },
+  
+  "scheduler": {
+    "type": "cosine",
+    "T_max": 100,
+    "eta_min": 1e-6
+  },
+  
+  "loss": {
+    "type": "mse"
+  },
+  
+  "output": {
+    "output_dir": "models/experiments",
+    "log_level": "INFO"
+  }
+}
