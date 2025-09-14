@@ -1,0 +1,30 @@
+# GNN Traffic Prediction Configuration
+
+# Model Settings
+model:
+  type: "stgcn"  # Options: stgcn, dcrnn, graphwavenet
+  hidden_channels: 64
+  num_layers: 4
+  dropout: 0.3
+
+# Training Settings
+training:
+  batch_size: 32
+  learning_rate: 0.001
+  num_epochs: 100
+  early_stopping_patience: 10
+  device: "cuda"
+
+# Data Settings
+data:
+  sequence_length: 12
+  prediction_horizon: 12
+  train_ratio: 0.7
+  val_ratio: 0.15
+  test_ratio: 0.15
+
+# Paths
+paths:
+  data_dir: "data"
+  model_dir: "models"
+  results_dir: "results"
