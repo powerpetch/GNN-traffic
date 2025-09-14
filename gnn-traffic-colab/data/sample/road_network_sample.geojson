@@ -1,0 +1,18 @@
+To put your project into Google Colab, you can follow these steps:
+
+1. **Upload Your Files**: You can upload your project files directly to Google Colab. Use the file upload feature in Colab to upload your `.py` scripts, data files, and any other necessary files.
+
+2. **Mount Google Drive**: If your project files are stored in Google Drive, you can mount your Google Drive in Colab. This allows you to access files directly from your Drive. Use the following code snippet to mount your Drive:
+
+   from google.colab import drive
+   drive.mount('/content/drive')
+
+3. **Install Required Libraries**: Ensure that all the libraries your project depends on are installed in the Colab environment. You can install them using pip commands. For example:
+
+   !pip install pandas numpy geopandas torch torch-geometric
+
+4. **Run Your Code**: You can now run your code in the Colab cells. Make sure to adjust any file paths in your code to match the Colab environment or your mounted Google Drive.
+
+5. **Save Your Work**: If you make changes to your files, you can save them back to your Google Drive or download them directly from Colab.
+
+By following these steps, you can effectively run your project in Google Colab.
